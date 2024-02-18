@@ -1,3 +1,8 @@
+<?php
+require_once '../settings/config_session.php';
+require_once '../function/register_controller.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,22 +24,26 @@
 <body>
   <div class="register-container">
     <h2 class="text-center mb-4">Register</h2>
-    <form action="register.php" method="POST">
+    <form action="../action/register_user_action.php" method="POST">
       <div class="form-group">
         <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" name="username" required>
+        <input type="text" class="form-control" id="username" name="username" >
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" name="email" required>
+        <input type="email" class="form-control" id="email" name="email">
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" name="password" required>
+        <input type="password" class="form-control" id="password" name="password">
       </div>
       <button type="submit" class="btn btn-primary btn-block">Register</button>
     </form>
     <p class="mt-3 text-center">Already have an account? <a href="login.html">Login here</a></p>
   </div>
+    <?php
+    check_registration_errors();
+    ?>
+
 </body>
 </html>
