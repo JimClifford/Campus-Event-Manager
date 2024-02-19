@@ -45,5 +45,9 @@
   </section>
 
   <script src="script.js"></script>
+
+  <form action="../action/logout_user_action">
+      <button type="submit">Logout</button>
+  </form>
 </body>
 </html>

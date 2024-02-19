@@ -42,5 +42,6 @@ require_once '../function/login_controller.php'; //Require the login controller
     check_login_errors(); 
     ?>
   </div>
+
 </body>
 </html>
