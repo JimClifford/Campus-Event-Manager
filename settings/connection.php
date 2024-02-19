@@ -1,4 +1,7 @@
 <?php
+/**
+ * This file contains the configuration for the database connection
+ */
 
 $host = 'localhost';
 $dbname = 'es_db';

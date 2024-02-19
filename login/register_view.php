@@ -1,6 +1,6 @@
 <?php
-require_once '../settings/config_session.php';
-require_once '../function/register_controller.php';
+require_once '../settings/config_session.php'; //Require the session configuration
+require_once '../function/register_controller.php'; //Require the register controller
 ?>
 
 <!DOCTYPE html>
@@ -39,10 +39,10 @@ require_once '../function/register_controller.php';
       </div>
       <button type="submit" class="btn btn-primary btn-block">Register</button>
     </form>
-    <p class="mt-3 text-center">Already have an account? <a href="login.html">Login here</a></p>
+    <p class="mt-3 text-center">Already have an account? <a href="./login_view.php">Login here</a></p>
   </div>
     <?php
-    check_registration_errors();
+    check_registration_errors(); //Check for registration errors
     ?>
 
 </body>
