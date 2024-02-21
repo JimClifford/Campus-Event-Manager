@@ -1,0 +1,44 @@
+/* Background images */
+.bg-image {
+  position: fixed; /* Fixed position to stay in place during scroll */
+  width: 50%; /* Half width */
+  height: 100%; /* Full height */
+  top: 0; /* Align to the top */
+  filter: blur(2px); /* Gentle blur effect*/
+}
+
+.bg-image.left {
+  left: 0; /* Align to the left side */
+  background-size: cover; /* Cover the entire div */
+  background-position: center; /* Center the background image */
+}
+
+
+.bg-image.right {
+  right: 0; /* Align to the right side */
+  background-size: cover; /* Cover the entire div */
+  background-position: center; /* Center the background image */
+}
+
+.login-container, .register-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  z-index: 10; /* Ensuring it's above the background images */
+  position: relative; /* Required for z-index to take effect */
+}
+
+body, html {
+  height: 100%; /* Ensuring full height is taken */
+  margin: 0; /* Reseting default margin */
+}
+
+/* Ensuring the content is centered and does not overlap with the background */
+.container {
+  z-index: 10;
+  position: relative;
+}
