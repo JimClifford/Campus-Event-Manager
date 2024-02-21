@@ -1,6 +1,4 @@
 
--- DROP DATABASE IF EXISTS es_db;
-CREATE DATABASE es_db;
 USE es_db;
 
 
@@ -29,4 +27,25 @@ CREATE TABLE events (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (category_id) REFERENCES event_categories(category_id),
     FOREIGN KEY (creator_id) REFERENCES users(user_id)
+);
+
+CREATE TABLE rsvps (
+    rsvp_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    event_id INT,
+    status ENUM('going', 'not_going', 'maybe') DEFAULT 'going',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (event_id) REFERENCES events(event_id)
+);
+
+CREATE TABLE feedback (
+    feedback_id INT AUTO_INCREMENT PRIMARY KEY,
+    event_id INT,
+    user_id INT,
+    rating INT,
+    comment TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (event_id) REFERENCES events(event_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
