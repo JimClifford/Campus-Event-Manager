@@ -2,7 +2,6 @@
 require_once '../settings/config_session.php'; //Require the session configuration
 require_once '../function/register_controller.php'; //Require the register controller
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,20 +9,14 @@ require_once '../function/register_controller.php'; //Require the register contr
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register | Campus Event Scheduler</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    .register-container {
-      max-width: 400px;
-      margin: auto;
-      margin-top: 100px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="../css/login_register_background.css"> 
+  <script src="../js/login_register_background.js" defer></script>
 </head>
 <body>
+<div class="bg-image left"></div>
+<div class="bg-image right"></div>
   <div class="register-container">
-    <h2 class="text-center mb-4">Register</h2>
+    <h2 style="color: #1981b9" class="text-center mb-4">Register Now!</h2>
     <form action="../action/register_user_action.php" method="POST">
       <div class="form-group">
         <label for="username">Username</label>
@@ -39,11 +32,10 @@ require_once '../function/register_controller.php'; //Require the register contr
       </div>
       <button type="submit" class="btn btn-primary btn-block">Register</button>
     </form>
-    <p class="mt-3 text-center">Already have an account? <a href="./login_view.php">Login here</a></p>
+    <p class="mt-3 text-center">Already have an account? <a style="color: #1981b9" href="login_view.html">Login here</a></p>
   </div>
-    <?php
+<?php
     check_registration_errors(); //Check for registration errors
     ?>
-
 </body>
 </html>
